@@ -1,0 +1,17 @@
+header {
+  box-sizing: border-box;
+  height: 6em;
+  width: 100%;
+  padding: 1em;
+}
+header img {
+  float: left;
+  height: 100%;
+}
+
+nav {
+  float: right;
+  height: 100%;
+}
+
+/*# sourceMappingURL=header.component.css.map */
