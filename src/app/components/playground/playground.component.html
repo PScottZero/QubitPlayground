@@ -1,6 +1,8 @@
-<div id="qubit_grid">
-  <div class="qubit" *ngFor="let qubit of qubits; let i = index">
-    <img src="assets/images/qubit.svg" alt="Qubit {{i}}" [style.transform]="'rotate(' + rotateImage(qubit) + 'deg)'">
-    <p>q[{{i}}]</p>
+<div id="playground_container">
+  <div id="qubit_grid">
+    <div class="qubit" *ngFor="let qubit of qubits; let i = index">
+      <img src="assets/images/qubit.svg" alt="Qubit {{i}}" [style.transform]="'rotate(' + rotateImage(qubit) + 'deg)'">
+      <p>q[{{i}}]</p>
+    </div>
   </div>
 </div>
