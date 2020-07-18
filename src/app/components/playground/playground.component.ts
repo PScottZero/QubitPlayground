@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Qubit} from '../../Qubit';
 
-const QUBIT_COUNT = 16;
+const QUBIT_COUNT = 2;
 
 @Component({
   selector: 'app-playground',

@@ -4,11 +4,10 @@
   height: 100%;
 }
 
-#qubit_grid {
+#qubit_container {
   position: absolute;
-  display: flex;
   width: 60vh;
-  height: 60vh;
+  height: 30vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, calc(-50% - 3em));
@@ -16,10 +15,10 @@
 }
 
 .qubit {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
   position: relative;
-  flex: 25%;
-  width: 25%;
-  height: 25%;
   padding: 0.5em;
   box-sizing: border-box;
 
@@ -40,7 +39,9 @@
 
   p {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vh;
   }
 }
