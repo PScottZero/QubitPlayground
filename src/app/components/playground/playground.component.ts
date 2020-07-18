@@ -9,18 +9,17 @@ const QUBIT_COUNT = 2;
   styleUrls: ['./playground.component.scss']
 })
 export class PlaygroundComponent implements OnInit {
-  qubits: Qubit[];
+  qubitOne: Qubit;
+  qubitTwo: Qubit;
 
   constructor() {}
 
   ngOnInit(): void {
-    this.qubits = [];
-    for (let i = 0; i < QUBIT_COUNT; i++) {
-      this.qubits.push(new Qubit());
-    }
+    this.qubitOne = new Qubit();
+    this.qubitTwo = new Qubit();
   }
 
-  rotateImage(qubit: Qubit): number {
+  rotateQubit(qubit: Qubit): number {
     console.log(Math.pow(qubit.oneAmp, 2) * 180);
     return -Math.pow(qubit.oneAmp, 2) * 180;
   }

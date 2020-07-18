@@ -1,26 +1,58 @@
-#qubit_grid {
-  position: fixed;
-  display: flex;
-  width: 40vw;
-  height: 40vw;
+#playground_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#qubit_container {
+  position: absolute;
+  width: 60vh;
+  height: 30vh;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% - 3em));
   flex-wrap: wrap;
 }
 
 .qubit {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
   position: relative;
-  flex: 25%;
-  width: 25%;
-  height: 25%;
-  padding: 0.5em;
+  padding: 1em;
   box-sizing: border-box;
 }
-.qubit p {
+.qubit img {
+  transition: 0.3s;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.qubit:hover img {
+  filter: invert(100%);
+}
+.qubit .qubit_name {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6vh;
+}
+.qubit .qubit_state_zero {
+  position: absolute;
+  bottom: -4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3vh;
+}
+.qubit .qubit_state_one {
+  position: absolute;
+  top: -4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3vh;
 }
 
 /*# sourceMappingURL=playground.component.css.map */
