@@ -1,2 +1,9 @@
-<div id="sidebar">
+<div id="gate-sidebar" [class.show]="isVisible" >
+  <div id="open_sidebar_button" (click)="toggleSidebar()">
+    <p>GATES</p>
+  </div>
+  <div id="gate_selector">
+    <img *ngFor="let gate of gates" src="assets/images/gates/{{gate.img}}-gate.svg"
+      (click)="selectGate(gate.type)" alt="{{gate.name}}">
+  </div>
 </div>

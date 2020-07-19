@@ -1,6 +1,61 @@
-#sidebar {
-  z-index: 1;
-  background: lightgray;
-  width: 100%;
+#gate-sidebar {
+  position: fixed;
+  transition: 0.3s;
+  box-sizing: border-box;
+  top: 0;
+  left: -14em;
+  width: 14em;
+  height: 100vh;
+  background: #757575;
+}
+
+.show {
+  left: 0 !important;
+}
+
+#gate_selector {
   height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  direction: rtl;
+}
+
+#open_sidebar_button {
+  position: absolute;
+  background: #757575;
+  box-sizing: border-box;
+  top: 50%;
+  right: -3em;
+  transform: translateY(-50%);
+  border-radius: 0 1em 1em 0;
+  width: 3em;
+  height: 8em;
+  padding: 1em;
+  writing-mode: vertical-rl;
+  text-align: center;
+  cursor: pointer;
+
+  p {
+    color: white;
+  }
+}
+
+img {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em 2em;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
+
+::-webkit-scrollbar {
+  background: #757575;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999999;
+  width: 75%;
 }

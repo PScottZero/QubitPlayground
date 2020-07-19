@@ -20,7 +20,6 @@ export class PlaygroundComponent implements OnInit {
   }
 
   rotateQubit(qubit: Qubit): number {
-    console.log(Math.pow(qubit.oneAmp, 2) * 180);
     return -Math.pow(qubit.oneAmp, 2) * 180;
   }
 }
