@@ -10,7 +10,7 @@ export const gateList = [
   ),
   new Gate('Y',
     [
-      [0, -math.i],
+      [0, math.multiply(-1, math.i)],
       [math.i, 0]
     ]
   ),
@@ -35,7 +35,7 @@ export const gateList = [
   new Gate('T',
     [
       [1, 0],
-      [0, math.exp(math.i * math.pi / 4)]
+      [0, math.exp(math.divide(math.multiply(math.i, math.pi), 4))]
     ],
   ),
   new Gate('CNOT',

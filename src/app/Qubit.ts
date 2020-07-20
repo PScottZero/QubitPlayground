@@ -10,17 +10,9 @@ export class Qubit {
   }
 
   applyGate(matrix: math.Complex[][]): void {
-    const tmp = matrix[0][0] * this.amp0 + matrix[0][1] * this.amp1;
-    this.amp1 = matrix[1][0] * this.amp0 + matrix[1][1] * this.amp1;
+    const tmp = math.add(math.multiply(matrix[0][0], this.amp0), math.multiply(matrix[0][1], this.amp1));
+    this.amp1 = math.add(math.multiply(matrix[1][0], this.amp0), math.multiply(matrix[1][1], this.amp1));
     this.amp0 = tmp;
-  }
-
-  getRoundedAmp0(): math.Complex {
-    return +(this.amp0.toFixed(2));
-  }
-
-  getRoundedAmp1(): math.Complex {
-    return +(this.amp1.toFixed(2));
   }
 }
 
