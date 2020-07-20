@@ -1,25 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import {Qubit} from '../../Qubit';
-
-const QUBIT_COUNT = 2;
+import { Component } from '@angular/core';
+import { QubitService } from '../../services/qubit.service';
 
 @Component({
   selector: 'app-playground',
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.scss']
 })
-export class PlaygroundComponent implements OnInit {
-  qubitOne: Qubit;
-  qubitTwo: Qubit;
+export class PlaygroundComponent {
+  constructor(private qubitService: QubitService) {}
 
-  constructor() {}
-
-  ngOnInit(): void {
-    this.qubitOne = new Qubit();
-    this.qubitTwo = new Qubit();
+  selectQubit(qubitNo: number): void {
+    this.qubitService.selectQubit(qubitNo);
   }
 
-  rotateQubit(qubit: Qubit): number {
-    return -Math.pow(qubit.oneAmp, 2) * 180;
+  rotateQubit(qubitNo: number): number {
+    return this.qubitService.getQubitRotation(qubitNo);
   }
 }

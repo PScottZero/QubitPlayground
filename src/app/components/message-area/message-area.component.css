@@ -1,0 +1,12 @@
+#message-area {
+  position: absolute;
+  padding: 1em;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  line-height: 2;
+  text-align: center;
+}
+
+/*# sourceMappingURL=message-area.component.css.map */

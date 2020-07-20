@@ -1,21 +1,26 @@
 import * as math from 'mathjs';
 
 export class Qubit {
-  zeroAmp: math.Complex;
-  oneAmp: math.Complex;
+  amp0: math.Complex;
+  amp1: math.Complex;
 
   constructor() {
-    this.zeroAmp = 1;
-    this.oneAmp = 0;
+    this.amp0 = 1;
+    this.amp1 = 0;
   }
 
-  setZeroAmp(zeroAmp: math.Complex): void {
-    this.zeroAmp = zeroAmp;
-    this.oneAmp = math.sqrt(1 - math.pow(zeroAmp, 2));
+  applyGate(matrix: math.Complex[][]): void {
+    const tmp = matrix[0][0] * this.amp0 + matrix[0][1] * this.amp1;
+    this.amp1 = matrix[1][0] * this.amp0 + matrix[1][1] * this.amp1;
+    this.amp0 = tmp;
   }
 
-  setOneAmp(oneAmp: math.Complex): void {
-    this.oneAmp = oneAmp;
-    this.zeroAmp = math.sqrt(1 - math.pow(oneAmp, 2));
+  getRoundedAmp0(): math.Complex {
+    return +(this.amp0.toFixed(2));
+  }
+
+  getRoundedAmp1(): math.Complex {
+    return +(this.amp1.toFixed(2));
   }
 }
+

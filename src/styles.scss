@@ -12,6 +12,13 @@
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+
+  .ket {
+    display: inline-block;
+    height: 1.2em;
+    transform: translateY(0.22em);
+    margin-left: 0.2em;
+  }
 }
 
 body {

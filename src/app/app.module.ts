@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { IconButtonComponent } from './components/icon-button/icon-button.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { MessageAreaComponent } from './components/message-area/message-area.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HeaderComponent,
     IconButtonComponent,
     PlaygroundComponent,
-    SidebarComponent
+    SidebarComponent,
+    MessageAreaComponent
   ],
   imports: [
     BrowserModule

@@ -34,16 +34,12 @@
   writing-mode: vertical-rl;
   text-align: center;
   cursor: pointer;
-
-  &:hover {
-    p {
-      filter: brightness(70%);
-    }
-  }
-
-  p {
-    color: white;
-  }
+}
+#open_sidebar_button:hover p {
+  filter: brightness(70%);
+}
+#open_sidebar_button p {
+  color: white;
 }
 
 img {
@@ -51,10 +47,9 @@ img {
   width: 100%;
   padding: 1em 2em;
   cursor: pointer;
-
-  &:hover {
-    filter: brightness(70%);
-  }
+}
+img:hover {
+  filter: brightness(70%);
 }
 
 ::-webkit-scrollbar {
@@ -65,3 +60,5 @@ img {
   background: #999999;
   border-radius: 5em;
 }
+
+/*# sourceMappingURL=sidebar.component.css.map */

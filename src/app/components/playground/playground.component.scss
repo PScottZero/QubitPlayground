@@ -19,16 +19,16 @@
   width: 50%;
   height: 100%;
   position: relative;
-  padding: 1em;
+  padding: 2em;
   box-sizing: border-box;
   cursor: pointer;
 
   img {
-    transition: 0.3s;
+    transition: 0.5s;
   }
 
   &:hover {
-    img {
+    .qubit_img {
       filter: invert(100%);
     }
   }
@@ -41,19 +41,20 @@
     font-size: 6vh;
   }
 
-  .qubit_state_zero {
+  .qubit_state_zero, .qubit_state_one {
     position: absolute;
-    bottom: -4vh;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3vh;
+    height: 4vh;
+  }
+
+  .qubit_state_zero {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -2vh;
   }
 
   .qubit_state_one {
-    position: absolute;
-    top: -4vh;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 3vh;
+    top: -2vh;
   }
 }
