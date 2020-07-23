@@ -19,15 +19,11 @@
   width: 50%;
   height: 100%;
   position: relative;
-  padding: 2em;
+  padding: 4vh;
   box-sizing: border-box;
-  cursor: pointer;
 }
 .qubit img {
   transition: 0.5s;
-}
-.qubit:hover .qubit_img {
-  filter: invert(100%);
 }
 .qubit .qubit_name {
   position: absolute;
@@ -49,6 +45,13 @@
   left: 50%;
   transform: translateX(-50%);
   top: -2vh;
+}
+
+.qubit_hover {
+  cursor: pointer;
+}
+.qubit_hover:hover .qubit_img {
+  filter: invert(100%);
 }
 
 /*# sourceMappingURL=playground.component.css.map */

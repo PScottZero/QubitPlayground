@@ -1,13 +1,15 @@
 <div id="playground_container">
   <div id="qubit_container">
-    <div class="qubit" (click)="selectQubit(1)">
-      <img class="qubit_img" src="assets/images/qubit.svg" alt="Qubit One" [style.transform]="'rotate(' + rotateQubit(1) + 'deg)'">
+    <div class="qubit" [class.qubit_hover]="selectionEnabled()" (click)="selectQubit(0)">
+      <img class="qubit_img" src="assets/images/qubit.svg" alt="Qubit One"
+           [style.transform]="'rotate(' + rotateQubit(0) + 'deg)'">
       <p class="qubit_name">α</p>
       <img class="qubit_state_zero" src="../../../assets/images/kets/ket-0.svg" alt="|0⟩">
       <img class="qubit_state_one" src="../../../assets/images/kets/ket-1.svg" alt="|1⟩">
     </div>
-    <div class="qubit" (click)="selectQubit(2)">
-      <img class="qubit_img" src="assets/images/qubit.svg" alt="Qubit Two" [style.transform]="'rotate(' + rotateQubit(2) + 'deg)'">
+    <div class="qubit" [class.qubit_hover]="selectionEnabled()" (click)="selectQubit(1)">
+      <img class="qubit_img" src="assets/images/qubit.svg" alt="Qubit Two"
+           [style.transform]="'rotate(' + rotateQubit(1) + 'deg)'">
       <p class="qubit_name">β</p>
       <img class="qubit_state_zero" src="../../../assets/images/kets/ket-0.svg" alt="|0⟩">
       <img class="qubit_state_one" src="../../../assets/images/kets/ket-1.svg" alt="|1⟩">

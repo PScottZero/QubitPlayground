@@ -18,19 +18,19 @@ export class Tensor {
     this.amp11 = [qubitOne.amp1, qubitTwo.amp1];
   }
 
-  getRoundedAmp00(): math.Complex {
-    return math.round(math.multiply(this.amp00[0], this.amp00[1]), 2);
+  getAmp00(): math.Complex {
+    return math.multiply(this.amp00[0], this.amp00[1]);
   }
 
-  getRoundedAmp01(): math.Complex {
-    return math.round(math.multiply(this.amp01[0], this.amp01[1]), 2);
+  getAmp01(): math.Complex {
+    return math.multiply(this.amp01[0], this.amp01[1]);
   }
 
-  getRoundedAmp10(): math.Complex {
-    return math.round(math.multiply(this.amp10[0], this.amp10[1]), 2);
+  getAmp10(): math.Complex {
+    return math.multiply(this.amp10[0], this.amp10[1]);
   }
 
-  getRoundedAmp11(): math.Complex {
-    return math.round(math.multiply(this.amp11[0], this.amp11[1]), 2);
+  getAmp11(): math.Complex {
+    return math.multiply(this.amp11[0], this.amp11[1]);
   }
 }

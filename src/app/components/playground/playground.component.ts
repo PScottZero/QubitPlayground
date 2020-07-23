@@ -16,4 +16,8 @@ export class PlaygroundComponent {
   rotateQubit(qubitNo: number): number {
     return this.qubitService.getQubitRotation(qubitNo);
   }
+
+  selectionEnabled(): boolean {
+    return this.qubitService.selectionEnabled;
+  }
 }

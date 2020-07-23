@@ -21,6 +21,7 @@ export class SidebarComponent implements OnInit {
 
   selectGate(gate: Gate): void {
     this.toggleSidebar();
+    this.qubitService.selectionEnabled = true;
     this.qubitService.setGate(gate);
   }
 
