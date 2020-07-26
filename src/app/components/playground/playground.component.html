@@ -7,8 +7,8 @@
            [style.transform]="'rotate(' + rotateQubit(0) + 'deg)'">
       <p class="qubit_name">α</p>
       <img [ngClass]="isTensorMode() ? 'qubit_state_zero' : 'qubit_state_zero_alt'"
-           src="../../../assets/images/kets/ket-0.svg" [class.hide]="isEntangled()" alt="|0⟩">
-      <img class="qubit_state_one" src="../../../assets/images/kets/ket-1.svg"
+           src="assets/images/kets/ket-0.svg" [class.hide]="isEntangled()" alt="|0⟩">
+      <img class="qubit_state_one" src="assets/images/kets/ket-1.svg"
            [class.hide]="isEntangled()" alt="|1⟩">
     </div>
     <div class="qubit" style="display: none" [class.show_second_qubit]="isTensorMode()"
@@ -16,9 +16,9 @@
       <img class="qubit_img" src="assets/images/{{getQubitImage()}}" alt="Qubit Two"
            [style.transform]="'rotate(' + rotateQubit(1) + 'deg)'">
       <p class="qubit_name">β</p>
-      <img class="qubit_state_zero" src="../../../assets/images/kets/ket-0.svg"
+      <img class="qubit_state_zero" src="assets/images/kets/ket-0.svg"
            [class.hide]="isEntangled()" alt="|0⟩">
-      <img class="qubit_state_one" src="../../../assets/images/kets/ket-1.svg"
+      <img class="qubit_state_one" src="assets/images/kets/ket-1.svg"
            [class.hide]="isEntangled()" alt="|1⟩">
     </div>
   </div>
