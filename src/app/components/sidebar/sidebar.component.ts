@@ -36,7 +36,11 @@ export class SidebarComponent implements OnInit {
     }
   }
 
-  toggleSidebar(): void {
-    this.isVisible = !this.isVisible;
+  show(): void {
+    this.isVisible = true;
+  }
+
+  hide(): void {
+    this.isVisible = false;
   }
 }

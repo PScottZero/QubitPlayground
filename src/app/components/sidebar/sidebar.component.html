@@ -1,5 +1,5 @@
-<div id="gate-sidebar" [class.show]="isVisible" >
-  <div id="open_sidebar_button" (click)="toggleSidebar()">
+<div id="gate-sidebar" [class.show]="isVisible" (mouseenter)="show()" (mouseleave)="hide()">
+  <div id="open_sidebar_button">
     <p>GATES</p>
   </div>
   <div id="gate_selector">

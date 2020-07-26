@@ -3,7 +3,7 @@
   z-index: 2;
   box-sizing: border-box;
   top: 0;
-  left: -14em;
+  left: -13em;
   width: 14em;
   height: 100vh;
   background: #757575;
@@ -26,26 +26,15 @@
   background: #757575;
   box-sizing: border-box;
   top: 50%;
-  right: -3em;
+  right: -2em;
   transform: translateY(-50%);
   border-radius: 0 1em 1em 0;
-  width: 3em;
+  width: 2em;
   height: 8em;
   padding: 1em;
   writing-mode: vertical-rl;
   text-align: center;
-  cursor: pointer;
-
-  &:hover {
-    p {
-      filter: brightness(70%);
-    }
-  }
-
-  p {
-    transition: 0.2s;
-    color: white;
-  }
+  color: white;
 }
 
 img {
@@ -62,9 +51,9 @@ img {
 
 ::-webkit-scrollbar {
   background: #757575;
+  width: 0.75em;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #999999;
-  border-radius: 5em;
 }

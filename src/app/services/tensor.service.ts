@@ -41,8 +41,7 @@ export class TensorService {
   }
 
   getQubitRotation(qubitNo: number): number {
-    console.log(this.qubitAmps);
-    return -math.multiply(this.qubitAmps[qubitNo], 180);
+    return -math.multiply(this.qubitAmps[qubitNo], 90);
   }
 
   isEntangled(): boolean {

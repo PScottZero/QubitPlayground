@@ -15,26 +15,27 @@
 
 #qubit_container {
   position: absolute;
-  width: 80vh;
+  width: 40vh;
   height: 40vh;
   border-radius: 40vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, calc(-50% - 3em));
   flex-wrap: wrap;
+  transition: width 0.3s ease-in;
 }
 
-.small_qubit_container {
-  width: 40vh !important;
+.expand {
+  width: 80vh !important;
 }
 
 .qubit {
   display: inline-block;
-  width: 50%;
-  height: 100%;
+  width: 40vh;
   position: relative;
   padding: 4vh;
   box-sizing: border-box;
+  transition: width 0.3s ease-in;
 
   img {
     transition: 0.5s;
@@ -46,36 +47,29 @@
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 6vh;
-  }
-
-  .qubit_state_zero, .qubit_state_one {
-    transition: 0s;
-    position: absolute;
-    height: 4vh;
-    left: 50%;
-    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    transition-delay: 0.1s;
   }
 
   .qubit_state_zero {
-    bottom: -2vh;
-  }
-
-  .qubit_state_zero_alt {
-    transition: 0s;
     position: absolute;
     height: 4vh;
     top: 50%;
     transform: translateY(-50%);
     right: -2vh;
+    transition: opacity 0.3s;
+    transition-delay: 0.1s;
   }
 
   .qubit_state_one {
+    position: absolute;
+    height: 4vh;
+    left: 50%;
+    transform: translateX(-50%);
     top: -2vh;
+    transition: opacity 0.3s;
+    transition-delay: 0.1s;
   }
-}
-
-.qubit_single {
-  width: 100%;
 }
 
 .qubit_hover {
@@ -88,42 +82,11 @@
   }
 }
 
-.show_second_qubit {
-  display: inline-block !important;
-}
-
-.show {
-  transition: 0.3s !important;
-  opacity: 100;
-}
-
 .hide {
-  transition: 0.3s !important;
   opacity: 0;
+  transition-delay: 0s !important;
 }
 
-.border {
-  animation: entangle 0.3s forwards;
-}
-
-.no-border {
-  animation: untangle 0.3s forwards;
-}
-
-@keyframes entangle {
-  from {
-    border: 0;
-  }
-  to {
-    border: 1vh solid #4724ff;
-  }
-}
-
-@keyframes untangle {
-  from {
-    border: 1vh solid #4724ff;
-  }
-  to {
-    border: 0;
-  }
+.hide_qubit {
+  width: 0;
 }
