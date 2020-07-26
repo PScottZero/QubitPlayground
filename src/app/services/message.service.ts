@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Ket} from '../classes/Ket';
 import {Tensor} from '../classes/Tensor';
 import {Gate} from '../classes/Gate';

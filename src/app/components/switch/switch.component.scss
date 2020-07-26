@@ -13,24 +13,23 @@
   width: 2.5em;
   border-radius: 2.5em;
   text-align: center;
-  line-height: 2.5em;
+  line-height: 2.7em;
   transition: 0.3s;
+}
+
+#one_qubit, #two_qubits {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 2.7em;
 }
 
 #one_qubit {
   float: left;
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  line-height: 2.5em;
 }
 
 #two_qubits {
   float: right;
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  line-height: 2.5em;
 }
 
 .right {
@@ -41,26 +40,4 @@
 .left {
   right: 2.5em;
   background: #fc80ff;
-}
-
-@keyframes left {
-  from {
-    right: 0;
-    background: #4724ff;
-  }
-  to {
-    right: 2.5em;
-    background: #fc80ff;
-  }
-}
-
-@keyframes right {
-  from {
-    right: 2.5em;
-    background: #fc80ff;
-  }
-  to {
-    right: 0;
-    background: #4724ff;
-  }
 }

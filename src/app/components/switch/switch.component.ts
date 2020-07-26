@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AppStateService} from '../../services/app-state.service';
 import {QubitService} from '../../services/qubit.service';
 import {TensorService} from '../../services/tensor.service';

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Qubit} from '../classes/Qubit';
 import * as math from 'mathjs';
 import {MessageService} from './message.service';

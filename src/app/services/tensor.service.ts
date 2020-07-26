@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Tensor} from '../classes/Tensor';
 import {Gate} from '../classes/Gate';
 import * as math from 'mathjs';
