@@ -1,3 +1,12 @@
+#entanglement {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #playground_container {
   position: relative;
   width: 100%;
@@ -8,10 +17,15 @@
   position: absolute;
   width: 80vh;
   height: 40vh;
+  border-radius: 40vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, calc(-50% - 3em));
   flex-wrap: wrap;
+}
+
+.small_qubit_container {
+  width: 40vh !important;
 }
 
 .qubit {
@@ -33,18 +47,29 @@
   font-size: 6vh;
 }
 .qubit .qubit_state_zero, .qubit .qubit_state_one {
+  transition: 0s;
   position: absolute;
   height: 4vh;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .qubit .qubit_state_zero {
+  bottom: -2vh;
+}
+.qubit .qubit_state_zero_alt {
+  transition: 0s;
+  position: absolute;
+  height: 4vh;
   top: 50%;
   transform: translateY(-50%);
   right: -2vh;
 }
 .qubit .qubit_state_one {
-  left: 50%;
-  transform: translateX(-50%);
   top: -2vh;
+}
+
+.qubit_single {
+  width: 100%;
 }
 
 .qubit_hover {
@@ -52,6 +77,45 @@
 }
 .qubit_hover:hover .qubit_img {
   filter: invert(100%);
+}
+
+.show_second_qubit {
+  display: inline-block !important;
+}
+
+.show {
+  transition: 0.3s !important;
+  opacity: 100;
+}
+
+.hide {
+  transition: 0.3s !important;
+  opacity: 0;
+}
+
+.border {
+  animation: entangle 0.3s forwards;
+}
+
+.no-border {
+  animation: untangle 0.3s forwards;
+}
+
+@keyframes entangle {
+  from {
+    border: 0;
+  }
+  to {
+    border: 1vh solid #4724ff;
+  }
+}
+@keyframes untangle {
+  from {
+    border: 1vh solid #4724ff;
+  }
+  to {
+    border: 0;
+  }
 }
 
 /*# sourceMappingURL=playground.component.css.map */

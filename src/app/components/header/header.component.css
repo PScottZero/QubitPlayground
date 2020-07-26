@@ -1,7 +1,7 @@
 header {
+  position: relative;
   box-sizing: border-box;
   height: 6em;
-  width: 100%;
   padding: 1em;
 }
 header img {
@@ -12,6 +12,13 @@ header img {
 nav {
   float: right;
   height: 100%;
+}
+
+app-switch {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=header.component.css.map */

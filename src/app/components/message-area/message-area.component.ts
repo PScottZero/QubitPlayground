@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {QubitService} from '../../services/qubit.service';
+import {MessageService} from '../../services/message.service';
 
 @Component({
   selector: 'app-message-area',
@@ -8,11 +8,11 @@ import {QubitService} from '../../services/qubit.service';
 })
 export class MessageAreaComponent implements OnInit {
 
-  constructor(private qubitService: QubitService) { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit(): void {}
 
   getMessage(): string {
-    return this.qubitService.getMessage();
+    return this.messageService.getMessage();
   }
 }

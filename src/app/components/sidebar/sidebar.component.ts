@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { gateList } from '../../GateList';
-import { QubitService } from '../../services/qubit.service';
-import {Gate} from '../../Gate';
+import {Component, OnInit} from '@angular/core';
+import {TensorService} from '../../services/tensor.service';
+import {Gate, oneQubitGates, twoQubitGates} from '../../classes/Gate';
+import {QubitService} from '../../services/qubit.service';
+import {AppStateService} from '../../services/app-state.service';
 
 @Component({
   selector: 'app-gate-selector',
@@ -10,19 +11,29 @@ import {Gate} from '../../Gate';
 })
 export class SidebarComponent implements OnInit {
   isVisible: boolean;
-  gates: Gate[];
 
-  constructor(private qubitService: QubitService) {}
+  constructor(private qubitService: QubitService,
+              private tensorService: TensorService,
+              private appStateService: AppStateService) {}
 
   ngOnInit(): void {
-    this.gates = gateList;
     this.isVisible = false;
   }
 
+  getGates(): Gate[] {
+    if (this.appStateService.isTensorMode()) {
+      return twoQubitGates;
+    }
+    return oneQubitGates;
+  }
+
   selectGate(gate: Gate): void {
-    this.toggleSidebar();
-    this.qubitService.selectionEnabled = true;
-    this.qubitService.setGate(gate);
+    if (this.appStateService.isTensorMode()) {
+      this.tensorService.selectionEnabled = true;
+      this.tensorService.setGate(gate);
+    } else {
+      this.qubitService.applyGate(gate);
+    }
   }
 
   toggleSidebar(): void {

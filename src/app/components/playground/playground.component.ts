@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { QubitService } from '../../services/qubit.service';
+import {Component} from '@angular/core';
+import {TensorService} from '../../services/tensor.service';
+import {QubitService} from '../../services/qubit.service';
+import {AppStateService} from '../../services/app-state.service';
 
 @Component({
   selector: 'app-playground',
@@ -7,17 +9,49 @@ import { QubitService } from '../../services/qubit.service';
   styleUrls: ['./playground.component.scss']
 })
 export class PlaygroundComponent {
-  constructor(private qubitService: QubitService) {}
+  constructor(private qubitService: QubitService,
+              private tensorService: TensorService,
+              private appStateService: AppStateService) {}
+
+  getQubitImage(): string {
+    if (this.isEntangled()) {
+      return 'qubit_entangled.svg';
+    }
+    return 'qubit.svg';
+  }
 
   selectQubit(qubitNo: number): void {
-    this.qubitService.selectQubit(qubitNo);
+    if (this.isTensorMode()) {
+      this.tensorService.selectQubit(qubitNo);
+    }
   }
 
   rotateQubit(qubitNo: number): number {
-    return this.qubitService.getQubitRotation(qubitNo);
+    if (this.isTensorMode()) {
+      if (!this.isEntangled()) {
+        return this.tensorService.getQubitRotation(qubitNo);
+      }
+      return 0;
+    } else {
+      return this.qubitService.getQubitRotation();
+    }
   }
 
   selectionEnabled(): boolean {
-    return this.qubitService.selectionEnabled;
+    if (this.isTensorMode()) {
+      return this.tensorService.selectionEnabled;
+    }
+    return false;
+  }
+
+  isEntangled(): boolean {
+    if (this.isTensorMode()) {
+      return this.tensorService.isEntangled();
+    }
+    return false;
+  }
+
+  isTensorMode(): boolean {
+    return this.appStateService.isTensorMode();
   }
 }

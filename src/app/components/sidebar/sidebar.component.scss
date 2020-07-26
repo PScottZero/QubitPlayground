@@ -1,13 +1,13 @@
 #gate-sidebar {
   position: fixed;
   z-index: 2;
-  transition: 0.3s;
   box-sizing: border-box;
   top: 0;
   left: -14em;
   width: 14em;
   height: 100vh;
   background: #757575;
+  transition: 0.3s;
 }
 
 .show {
@@ -43,6 +43,7 @@
   }
 
   p {
+    transition: 0.2s;
     color: white;
   }
 }
@@ -52,6 +53,7 @@ img {
   width: 100%;
   padding: 1em 2em;
   cursor: pointer;
+  transition: 0.2s;
 
   &:hover {
     filter: brightness(70%);

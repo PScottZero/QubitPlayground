@@ -3,7 +3,7 @@
     <p>GATES</p>
   </div>
   <div id="gate_selector">
-    <img *ngFor="let gate of gates" src="assets/images/gates/{{gate.name | lowercase}}-gate.svg"
+    <img *ngFor="let gate of getGates()" src="assets/images/gates/{{gate.name | lowercase}}-gate.svg"
       (click)="selectGate(gate)" alt="{{gate.name}}">
   </div>
 </div>

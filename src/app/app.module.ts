@@ -7,6 +7,7 @@ import { IconButtonComponent } from './components/icon-button/icon-button.compon
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MessageAreaComponent } from './components/message-area/message-area.component';
+import { SwitchComponent } from './components/switch/switch.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MessageAreaComponent } from './components/message-area/message-area.com
     IconButtonComponent,
     PlaygroundComponent,
     SidebarComponent,
-    MessageAreaComponent
+    MessageAreaComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule
