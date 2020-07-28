@@ -17,26 +17,20 @@ app-switch {
 }
 
 header {
-  @media (min-width: $mobile-cutoff) {
-    position: relative;
-    box-sizing: border-box;
-    height: 6em;
-    padding: 1em;
+  position: relative;
+  box-sizing: border-box;
+  height: 6em;
+  padding: 1em;
 
-    img {
-      float: left;
-      margin-left: 1em;
+  img {
+    float: left;
+
+    @media (min-width: $mobile-cutoff) {
       height: 100%;
+      margin-left: 1em;
     }
-  }
 
-  @media (max-width: $mobile-cutoff) {
-    box-sizing: border-box;
-    height: 6em;
-    padding: 1em;
-
-    img {
-      float: left;
+    @media (max-width: $mobile-cutoff) {
       height: 100%;
       width: 60%;
     }
@@ -44,10 +38,17 @@ header {
 }
 
 nav {
-  float: right;
-  height: 100%;
+  @media (min-width: $mobile-cutoff) {
+    float: right;
+    height: 100%;
+  }
 
   @media (max-width: $mobile-cutoff) {
-    display: none;
+    position: absolute;
+    height: 3em;
+    width: calc(100% - 2em);
+    top: 5em;
+    text-align: center;
+    margin: 0;
   }
 }

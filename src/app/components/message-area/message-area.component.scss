@@ -10,9 +10,10 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 28px;
-  line-height: 2;
+  line-height: 1.5;
 
   @media (max-width: $mobile-cutoff) {
+    padding: 0.5em;
     font-size: 3vh;
     margin-bottom: 6vh;
   }
