@@ -8,13 +8,20 @@ button {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   transition: 0.2s;
 }
-button:hover {
-  cursor: pointer;
-  filter: brightness(70%);
-}
 button img {
   float: top;
   height: 100%;
+}
+@media (min-width: 700px) {
+  button:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+  }
+}
+@media (max-width: 700px) {
+  button {
+    margin: 0 1em;
+  }
 }
 
 /*# sourceMappingURL=icon-button.component.css.map */

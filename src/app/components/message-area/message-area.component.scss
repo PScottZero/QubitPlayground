@@ -1,20 +1,23 @@
 @import '../../../variables';
 
 #message-area {
-  position: absolute;
   box-sizing: border-box;
-  width: 100%;
-  padding: 1em;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 28px;
-  line-height: 2;
   text-align: center;
+  padding: 1em;
+
+  @media (min-width: $mobile-cutoff) {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    line-height: 2;
+  }
 
   @media (max-width: $mobile-cutoff) {
-    height: auto;
-    font-size: 24px;
-    margin-bottom: 2em;
+    width: 100%;
+    height: 100%;
+    font-size: 3vh;
   }
 }

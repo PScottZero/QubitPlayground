@@ -17,9 +17,8 @@ app-switch {
 }
 
 header {
-  position: relative;
   box-sizing: border-box;
-  height: 6em;
+  height: 100%;
   padding: 1em;
 
   img {
@@ -29,6 +28,7 @@ header {
 
     @media (max-width: $mobile-cutoff) {
       float: left;
+      height: 100%;
       width: 60%;
     }
   }
@@ -39,12 +39,6 @@ nav {
   height: 100%;
 
   @media (max-width: $mobile-cutoff) {
-    position: absolute;
-    bottom: -2.3em;
-    left: 50%;
-    transform: translate(-50%);
-    height: 3em;
-    width: 100%;
-    text-align: center;
+    display: none;
   }
 }

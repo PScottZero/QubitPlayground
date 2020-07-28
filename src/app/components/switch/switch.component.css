@@ -1,67 +1,29 @@
 #switch {
-  width: 5em;
+  width: 4.5em;
   height: 2.5em;
   border-radius: 2.5em;
   background: #dddddd;
 }
 
 #slider {
-  z-index: 1;
+  position: relative;
   color: white;
-  position: absolute;
   height: 2.5em;
   width: 2.5em;
   border-radius: 2.5em;
   text-align: center;
-  line-height: 2.5em;
+  line-height: 2.7em;
   transition: 0.3s;
 }
 
-#one_qubit {
-  float: left;
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  line-height: 2.5em;
-}
-
-#two_qubits {
-  float: right;
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  line-height: 2.5em;
-}
-
 .right {
-  right: 0;
+  left: 2em;
   background: #4724ff;
 }
 
 .left {
-  right: 2.5em;
+  left: 0;
   background: #fc80ff;
-}
-
-@keyframes left {
-  from {
-    right: 0;
-    background: #4724ff;
-  }
-  to {
-    right: 2.5em;
-    background: #fc80ff;
-  }
-}
-@keyframes right {
-  from {
-    right: 2.5em;
-    background: #fc80ff;
-  }
-  to {
-    right: 0;
-    background: #4724ff;
-  }
 }
 
 /*# sourceMappingURL=switch.component.css.map */

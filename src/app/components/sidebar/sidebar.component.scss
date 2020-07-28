@@ -16,7 +16,7 @@
 
   @media (max-width: $mobile-cutoff) {
     width: 100%;
-    bottom: -9em;
+    bottom: -8em;
     white-space: nowrap;
     padding-top: 0.5em;
   }
@@ -72,16 +72,21 @@
     height: 8em;
     padding: 1em;
     writing-mode: vertical-rl;
+
+    /* safari only */
+    @media not all and (min-resolution:.001dpcm) {
+      right: 0;
+    }
   }
 
   @media (max-width: $mobile-cutoff) {
-    top: -2.5em;
+    top: -5vh;
     left: 50%;
     transform: translateX(-50%);
     width: 8em;
-    height: 2.5em;
+    height: 5vh;
     border-radius: 1em 1em 0 0;
-    line-height: 3em;
+    line-height: 7vh;
   }
 }
 
