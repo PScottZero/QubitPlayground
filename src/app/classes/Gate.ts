@@ -188,5 +188,15 @@ export const twoQubitGates = [
       ]
     ]
   ),
+  new Gate('QFT',
+    [
+      [
+        [math.divide(1, 2), math.divide(1, 2), math.divide(1, 2), math.divide(1, 2)],
+        [math.divide(1, 2), math.divide(math.i, 2), math.divide(-1, 2), math.divide(math.multiply(-1, math.i), 2)],
+        [math.divide(1, 2), math.divide(-1, 2), math.divide(1, 2), math.divide(-1, 2)],
+        [math.divide(1, 2), math.divide(math.multiply(-1, math.i), 2), math.divide(-1, 2), math.divide(math.i, 2)]
+      ]
+    ]
+  )
 ];
 

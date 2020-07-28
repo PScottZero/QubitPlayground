@@ -1,51 +1,96 @@
-#gate-sidebar {
+@import '../../../variables';
+
+#sidebar {
   position: fixed;
   z-index: 2;
   box-sizing: border-box;
-  top: 0;
-  left: -13em;
-  width: 14em;
-  height: 100vh;
   background: #757575;
   transition: 0.3s;
-}
 
-.show {
-  left: 0 !important;
+  @media (min-width: $mobile-cutoff) {
+    top: 0;
+    left: -13em;
+    width: 14em;
+    height: 100vh;
+  }
+
+  @media (max-width: $mobile-cutoff) {
+    width: 100%;
+    bottom: -9em;
+    white-space: nowrap;
+    padding-top: 0.5em;
+  }
 }
 
 #gate_selector {
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
-  direction: rtl;
+  @media (min-width: $mobile-cutoff) {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    direction: rtl;
+  }
+  @media (max-width: $mobile-cutoff) {
+    height: 100%;
+    overflow-x: auto;
+  }
+
+  img {
+    box-sizing: border-box;
+    cursor: pointer;
+
+    @media (min-width: $mobile-cutoff) {
+      width: 100%;
+      padding: 1em 2em;
+      transition: 0.2s;
+
+      &:hover {
+        filter: brightness(70%);
+      }
+    }
+
+    @media (max-width: $mobile-cutoff) {
+      height: 8em;
+      padding: 0.5em 2em;
+      transition: 0.2s;
+    }
+  }
 }
 
-#open_sidebar_button {
+#sidebar_label {
   position: absolute;
   background: #757575;
-  box-sizing: border-box;
-  top: 50%;
-  right: -2em;
-  transform: translateY(-50%);
-  border-radius: 0 1em 1em 0;
-  width: 2em;
-  height: 8em;
-  padding: 1em;
-  writing-mode: vertical-rl;
-  text-align: center;
   color: white;
+  box-sizing: border-box;
+  text-align: center;
+
+  @media (min-width: $mobile-cutoff) {
+    top: 50%;
+    right: -2em;
+    transform: translateY(-50%);
+    border-radius: 0 1em 1em 0;
+    width: 2em;
+    height: 8em;
+    padding: 1em;
+    writing-mode: vertical-rl;
+  }
+
+  @media (max-width: $mobile-cutoff) {
+    top: -2.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8em;
+    height: 2.5em;
+    border-radius: 1em 1em 0 0;
+    line-height: 3em;
+  }
 }
 
-img {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 1em 2em;
-  cursor: pointer;
-  transition: 0.2s;
-
-  &:hover {
-    filter: brightness(70%);
+.show {
+  @media (min-width: $mobile-cutoff) {
+    left: 0 !important;
+  }
+  @media (max-width: $mobile-cutoff) {
+    bottom: 0 !important;
   }
 }
 

@@ -1,8 +1,19 @@
+@import '../../../variables';
+
 app-switch {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  @media (min-width: $mobile-cutoff) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: $mobile-cutoff) {
+    position: relative;
+    float: right;
+    height: 100%;
+    top: 0.75em;
+  }
 }
 
 header {
@@ -15,10 +26,25 @@ header {
     float: left;
     margin-left: 1em;
     height: 100%;
+
+    @media (max-width: $mobile-cutoff) {
+      float: left;
+      width: 60%;
+    }
   }
 }
 
 nav {
   float: right;
   height: 100%;
+
+  @media (max-width: $mobile-cutoff) {
+    position: absolute;
+    bottom: -2.3em;
+    left: 50%;
+    transform: translate(-50%);
+    height: 3em;
+    width: 100%;
+    text-align: center;
+  }
 }

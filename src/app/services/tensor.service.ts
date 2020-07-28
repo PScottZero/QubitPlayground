@@ -33,7 +33,7 @@ export class TensorService {
     this.gate = gate;
     if (gate.name === 'CNOT' || gate.name === 'CZ') {
       this.messageService.setSelectControlQubitMessage(gate);
-    } else if (gate.name === 'Swap') {
+    } else if (gate.name === 'Swap' || gate.name === 'QFT') {
       this.selectQubit(0);
     } else {
       this.messageService.setSelectQubitMessage(gate);

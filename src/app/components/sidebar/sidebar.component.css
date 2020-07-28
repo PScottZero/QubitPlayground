@@ -1,4 +1,4 @@
-#gate-sidebar {
+#sidebar {
   position: fixed;
   z-index: 2;
   box-sizing: border-box;
@@ -21,7 +21,7 @@
   direction: rtl;
 }
 
-#open_sidebar_button {
+#sidebar_label {
   position: absolute;
   background: #757575;
   box-sizing: border-box;

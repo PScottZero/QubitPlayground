@@ -34,13 +34,27 @@ export class SidebarComponent implements OnInit {
     } else {
       this.qubitService.applyGate(gate);
     }
+
+    if (window.screen.width < 700) {
+      this.isVisible = false;
+    }
   }
 
   show(): void {
-    this.isVisible = true;
+    if (window.screen.width >= 700) {
+      this.isVisible = true;
+    }
   }
 
   hide(): void {
-    this.isVisible = false;
+    if (window.screen.width >= 700) {
+      this.isVisible = false;
+    }
+  }
+
+  toggle(): void {
+    if (window.screen.width < 700) {
+      this.isVisible = !this.isVisible;
+    }
   }
 }
