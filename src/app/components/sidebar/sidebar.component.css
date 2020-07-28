@@ -16,9 +16,9 @@
 @media (max-width: 700px) {
   #sidebar {
     width: 100%;
-    bottom: -8em;
+    bottom: -8.5em;
     white-space: nowrap;
-    padding-top: 0.5em;
+    padding-top: 1em;
   }
 }
 
@@ -85,7 +85,7 @@
 }
 @media (max-width: 700px) {
   #sidebar_label {
-    top: -5vh;
+    top: -4.9vh;
     left: 50%;
     transform: translateX(-50%);
     width: 8em;

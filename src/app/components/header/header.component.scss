@@ -17,16 +17,25 @@ app-switch {
 }
 
 header {
-  box-sizing: border-box;
-  height: 100%;
-  padding: 1em;
+  @media (min-width: $mobile-cutoff) {
+    position: relative;
+    box-sizing: border-box;
+    height: 6em;
+    padding: 1em;
 
-  img {
-    float: left;
-    margin-left: 1em;
-    height: 100%;
+    img {
+      float: left;
+      margin-left: 1em;
+      height: 100%;
+    }
+  }
 
-    @media (max-width: $mobile-cutoff) {
+  @media (max-width: $mobile-cutoff) {
+    box-sizing: border-box;
+    height: 6em;
+    padding: 1em;
+
+    img {
       float: left;
       height: 100%;
       width: 60%;
