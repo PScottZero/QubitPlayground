@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TensorService} from '../../services/tensor.service';
-import {Gate, oneQubitGates, twoQubitGates} from '../../classes/Gate';
+import {Gate, gateList} from '../../classes/Gate';
 import {QubitService} from '../../services/qubit.service';
 import {AppStateService} from '../../services/app-state.service';
 
@@ -21,10 +21,8 @@ export class SidebarComponent implements OnInit {
   }
 
   getGates(): Gate[] {
-    if (this.appStateService.isTensorMode()) {
-      return twoQubitGates;
-    }
-    return oneQubitGates;
+    const maxSize = (this.appStateService.isTensorMode()) ? 4 : 2;
+    return gateList.filter((gate: Gate) => gate.matrix.length <= maxSize);
   }
 
   selectGate(gate: Gate): void {

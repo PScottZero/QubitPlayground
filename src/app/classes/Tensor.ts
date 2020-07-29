@@ -17,7 +17,7 @@ export class Tensor {
   }
 
   applyGate(gate: Gate, qubitNo: number): math.Complex[] {
-    this.amps = math.multiply(gate.matrices[qubitNo], this.amps);
+    this.amps = math.multiply(gate.modifyGate(qubitNo), this.amps);
     if (!this.isEntangled()) {
       return this.decompose();
     }

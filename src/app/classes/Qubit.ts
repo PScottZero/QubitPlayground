@@ -9,6 +9,6 @@ export class Qubit {
   }
 
   applyGate(gate: Gate): void {
-    this.amps = math.multiply(gate.matrices[0], this.amps);
+    this.amps = math.multiply(gate.matrix, this.amps);
   }
 }

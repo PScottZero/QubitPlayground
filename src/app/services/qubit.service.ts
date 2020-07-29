@@ -21,8 +21,10 @@ export class QubitService {
   }
 
   getQubitRotation(): number {
-    const amp0 = (math.unequal(math.im(this.qubit.amps[0]), 0)) ? math.norm(this.qubit.amps[0]) : math.re(this.qubit.amps[0]);
-    const amp1 = (math.unequal(math.im(this.qubit.amps[1]), 0)) ? math.norm(this.qubit.amps[1]) : math.re(this.qubit.amps[1]);
+    const amp0 = (math.unequal(math.im(this.qubit.amps[0]), 0)) ?
+      math.norm(this.qubit.amps[0]) : math.re(this.qubit.amps[0]);
+    const amp1 = (math.unequal(math.im(this.qubit.amps[1]), 0)) ?
+      math.norm(this.qubit.amps[1]) : math.re(this.qubit.amps[1]);
     return math.multiply(-1, math.multiply(math.atan2(amp1, amp0), math.divide(180, math.pi)));
   }
 
