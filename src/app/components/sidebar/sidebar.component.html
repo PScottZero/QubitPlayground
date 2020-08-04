@@ -3,6 +3,7 @@
     <p>GATES</p>
   </div>
   <div id="gate_selector">
+    <img src="assets/images/measure.svg" alt="Measure Qubit" (click)="measure()">
     <img *ngFor="let gate of getGates()" src="assets/images/gates/{{gate.name | lowercase}}-gate.svg"
       (click)="selectGate(gate)" alt="{{gate.name}}">
   </div>

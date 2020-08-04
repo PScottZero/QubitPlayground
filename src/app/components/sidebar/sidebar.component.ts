@@ -38,6 +38,14 @@ export class SidebarComponent implements OnInit {
     }
   }
 
+  measure(): void {
+    if (this.appStateService.isTensorMode()) {
+      this.tensorService.setMeasureMode();
+    } else {
+      this.qubitService.measure();
+    }
+  }
+
   show(): void {
     if (window.screen.width >= 700) {
       this.isVisible = true;

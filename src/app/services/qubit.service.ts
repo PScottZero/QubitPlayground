@@ -36,4 +36,9 @@ export class QubitService {
     this.qubit.amps = amps;
     this.setQubitMessage();
   }
+
+  measure(): void {
+    this.qubit.measure();
+    this.setQubitMessage();
+  }
 }

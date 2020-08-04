@@ -18,11 +18,15 @@ export class MessageService {
   }
 
   setSelectControlQubitMessage(gate: Gate): void {
-    this.message = 'Select control qubit for ' + gate.name + ' gate...';
+    this.message = 'Select control qubit for ' + gate.name + ' gate';
   }
 
   setSelectQubitMessage(gate: Gate): void {
-    this.message = 'Select qubit to apply ' + gate.name + ' gate to...';
+    this.message = 'Select qubit to apply ' + gate.name + ' gate to';
+  }
+
+  setMeasureMessage(): void {
+    this.message = 'Select qubit to measure';
   }
 
   setQubitMessage(qubit: Qubit): void {

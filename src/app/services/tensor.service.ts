@@ -11,22 +11,27 @@ export class TensorService {
   qubitAmps: math.Complex[];
   tensor: Tensor;
   gate: Gate;
+  measureMode: boolean;
   selectionEnabled: boolean;
 
   constructor(private messageService: MessageService) {
     this.tensor = new Tensor([1, 0, 0, 0]);
     this.qubitAmps = this.tensor.decompose();
     this.gate = null;
+    this.measureMode = false;
     this.selectionEnabled = false;
   }
 
   selectQubit(qubitNo: number): void {
-    if (this.gate) {
+    if (this.measureMode) {
+      this.qubitAmps = this.tensor.measure(qubitNo);
+      this.measureMode = false;
+    } else if (this.gate) {
       this.qubitAmps = this.tensor.applyGate(this.gate, qubitNo);
-      this.messageService.setTensorMessage(this.tensor);
-      this.selectionEnabled = false;
       this.gate = null;
     }
+    this.messageService.setTensorMessage(this.tensor);
+    this.selectionEnabled = false;
   }
 
   setGate(gate: Gate): void {
@@ -55,5 +60,11 @@ export class TensorService {
   setAmps(amps: math.Complex[]): void {
     this.tensor.amps = amps;
     this.setTensorMessage();
+  }
+
+  setMeasureMode(): void {
+    this.measureMode = true;
+    this.selectionEnabled = true;
+    this.messageService.setMeasureMessage();
   }
 }
