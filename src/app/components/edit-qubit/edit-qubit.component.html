@@ -1,0 +1,14 @@
+<div id="edit-qubit-dialog" [class.show]="qubitDialogIsVisible()"
+     [ngClass]="isTensorMode() ? 'width-two' : 'width-one'">
+  <div class="input-line" *ngFor="let qubitInput of getInputs()">
+    <label for="qubit-input">
+      <img class="ket" src="assets/images/kets/ket-{{qubitInput.ket}}.svg" alt="|{{qubitInput.ket}}⟩">
+    </label>
+    <input id="qubit-input" [(ngModel)]="qubitInput.value" type="text"
+           [class.invalid]="!qubitInput.valid">
+  </div>
+  <div id="button-container">
+    <button id="submit" (click)="submitQubitSettings()">Submit</button>
+    <button id="cancel" (click)="hideQubitDialog()">Cancel</button>
+  </div>
+</div>

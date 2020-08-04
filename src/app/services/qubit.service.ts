@@ -31,4 +31,9 @@ export class QubitService {
   setQubitMessage(): void {
     this.messageService.setQubitMessage(this.qubit);
   }
+
+  setAmps(amps: math.Complex[]): void {
+    this.qubit.amps = amps;
+    this.setQubitMessage();
+  }
 }

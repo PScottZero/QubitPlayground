@@ -51,4 +51,9 @@ export class TensorService {
   setTensorMessage(): void {
     this.messageService.setTensorMessage(this.tensor);
   }
+
+  setAmps(amps: math.Complex[]): void {
+    this.tensor.amps = amps;
+    this.setTensorMessage();
+  }
 }

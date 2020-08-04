@@ -82,6 +82,12 @@ export const gateList = [
       [0, math.i]
     ]
   ),
+  new Gate('T',
+    [
+      [1, 0],
+      [0, math.exp(math.multiply(math.i, math.divide(math.pi, 4)))]
+    ]
+  ),
   new Gate('CNOT',
     [
       [1, 0, 0, 0],

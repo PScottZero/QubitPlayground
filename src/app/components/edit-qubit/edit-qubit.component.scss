@@ -1,0 +1,93 @@
+@import "../../../variables";
+
+button {
+  transition: 0.2s;
+  padding: 0.6em 1em;
+  margin: 0.5em;
+  background: #757575;
+  color: white;
+  font-size: 20px;
+  border-radius: 2em;
+  box-shadow: $button-shadow;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
+
+input {
+  height: 32px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 1em;
+  transform: translateY(-0.6em);
+  padding: 0 0 0 1em;
+  font-size: 18px;
+}
+
+label {
+  margin-right: 1em;
+}
+
+#edit-qubit-dialog {
+  position: absolute;
+  transition: bottom 0.2s;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+
+  @media (min-width:$mobile-cutoff) {
+    height: 16em;
+    bottom: -16em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 2em;
+    border-radius: 2em;
+  }
+
+  @media (max-width: $mobile-cutoff) {
+    z-index: 10;
+    height: 22em;
+    width: 100%;
+    bottom: -48em;
+    border-radius: 2em 2em 0 0;
+    padding-top: 1em;
+  }
+}
+
+.input-line {
+  display: inline-block;
+  display: -moz-inline-stack;
+  padding: 1em;
+  height: 2em;
+}
+
+.ket {
+  height: 2em;
+  transform: none;
+}
+
+.width-one {
+  width: 24em;
+}
+
+.width-two {
+  width: 48em;
+}
+
+.show {
+  @media (min-width: $mobile-cutoff) {
+    bottom: 1em !important;
+  }
+  @media (max-width: $mobile-cutoff) {
+    bottom: 0 !important;
+  }
+}
+
+.invalid {
+  border: 3px solid red;
+}

@@ -1,3 +1,5 @@
+/* sizing */
+/* styles */
 #sidebar {
   position: fixed;
   z-index: 2;
@@ -10,7 +12,7 @@
     top: 0;
     left: -13em;
     width: 14em;
-    height: 100vh;
+    height: 100%;
   }
 }
 @media (max-width: 700px) {

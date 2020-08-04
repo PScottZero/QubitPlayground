@@ -5,14 +5,19 @@
   box-sizing: border-box;
   text-align: center;
   padding: 1em;
-  width: 100%;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   font-size: 28px;
   line-height: 1.5;
 
+  @media (min-width: $mobile-cutoff) {
+    width: auto;
+    cursor: pointer;
+  }
+
   @media (max-width: $mobile-cutoff) {
+    width: 100%;
     padding: 0.5em;
     font-size: 3vh;
     margin-bottom: 6vh;
