@@ -1,6 +1,6 @@
 /* sizing */
 /* styles */
-#message-area {
+#message-container {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -12,17 +12,43 @@
   line-height: 1.5;
 }
 @media (min-width: 700px) {
-  #message-area {
+  #message-container {
     width: auto;
     cursor: pointer;
   }
 }
 @media (max-width: 700px) {
-  #message-area {
+  #message-container {
     width: 100%;
     padding: 0.5em;
     font-size: 3vh;
-    margin-bottom: 6vh;
+    margin-bottom: 8vh;
+  }
+}
+
+button {
+  transition: 0.2s;
+  padding: 0.6em 1em;
+  margin: 0.5em;
+  background: linear-gradient(135deg, #fc80ff, #4724ff);
+  color: white;
+  font-size: 20px;
+  border-radius: 2em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+button:hover {
+  filter: brightness(70%);
+}
+@media (max-width: 700px) {
+  button {
+    position: absolute;
+    font-size: 12px;
+    right: 0.5em;
+    width: 8em;
+    bottom: -6vh;
+    padding: 0.5em;
   }
 }
 

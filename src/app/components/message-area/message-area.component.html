@@ -1,1 +1,4 @@
-<div id="message-area" [innerHTML]="getMessage()" (click)="showQubitDialog()"></div>
+<div id="message-container">
+  <div id="message-area" [innerHTML]="getMessage()"></div>
+  <button (click)="showQubitDialog()">Change State</button>
+</div>

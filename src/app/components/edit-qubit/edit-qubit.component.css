@@ -4,11 +4,10 @@ button {
   transition: 0.2s;
   padding: 0.6em 1em;
   margin: 0.5em;
-  background: #757575;
+  background: #555;
   color: white;
   font-size: 20px;
   border-radius: 2em;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   border: none;
   outline: none;
@@ -19,7 +18,7 @@ button:hover {
 
 input {
   height: 32px;
-  border: 1px solid gray;
+  border: 3px solid #757575;
   outline: none;
   border-radius: 1em;
   transform: translateY(-0.6em);
@@ -35,9 +34,12 @@ label {
   position: absolute;
   transition: bottom 0.2s;
   box-sizing: border-box;
-  background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background: #757575;
+  color: white;
   text-align: center;
+}
+#edit-qubit-dialog img {
+  filter: invert(100%);
 }
 @media (min-width: 700px) {
   #edit-qubit-dialog {
@@ -89,6 +91,10 @@ label {
   .show {
     bottom: 0 !important;
   }
+}
+
+.show_small {
+  bottom: -8em !important;
 }
 
 .invalid {

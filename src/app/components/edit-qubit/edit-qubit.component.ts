@@ -111,4 +111,8 @@ export class EditQubitComponent implements OnInit {
     }
     return allValid;
   }
+
+  useSmallerContainer(): boolean {
+    return !this.isTensorMode() && (window.screen.width < 700) && this.qubitDialogIsVisible();
+  }
 }

@@ -1,4 +1,5 @@
 <div id="edit-qubit-dialog" [class.show]="qubitDialogIsVisible()"
+     [class.show_small]="useSmallerContainer()"
      [ngClass]="isTensorMode() ? 'width-two' : 'width-one'">
   <div class="input-line" *ngFor="let qubitInput of getInputs(); let i = index">
     <label for="qubit-input-{{i}}">
