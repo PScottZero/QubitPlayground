@@ -1,6 +1,6 @@
 # Qubit Playground
 
-Qubit playground is a web app that simulates one or two qubits at a time. You can interact with these qubits using one of many quantum gates. You can also measure the qubits to make them collapse into a specific state. If you have no experience with quantum computing, I would recommend reading these before using this web app:
+Qubit Playground is a web app that simulates one or two qubits at a time. You can interact with these qubits using one of many quantum gates. You can also measure the qubits to make them collapse into a specific state. If you have no experience with quantum computing, I would recommend reading these before using this web app:
 
 - https://en.wikipedia.org/wiki/Quantum_computing
 - https://en.wikipedia.org/wiki/Quantum_logic_gate
@@ -33,10 +33,10 @@ In two qubit mode, you can apply the same gates you could apply in one qubit mod
 - Swap
 - Quantum Fourier Transform (QFT)
 
-To apply gates with only one qubit as input, first click on the one qubit gate you want to apply from the gate sidebar, then click on the qubit you want to apply the gate to. Also, the CNOT and CZ gates need a qubit to be selected as the 'control' bit. When you select either of these gates, you will then need to click on the qubit you want as the control bit. The Swap and QFT gates do not require you to select any qubits, and are performed automaticaly when you select them.
+To apply gates with only one qubit as input, first click on the one qubit gate you want to apply from the gate sidebar, then click on the qubit you want to apply the gate to. Also, the CNOT and CZ gates need a qubit to be selected as the 'control' bit. When you select either of these gates, you will then need to click on the qubit you want as the control bit. The Swap and QFT gates do not require you to select any qubits, and are performed automatically when you select them.
 
 By default, both qubits start in the zero state. However, like in one qubit mode, the states can be modified by clicking the 'Change State' button.
 
-Since you are now dealing with two qubits, the qubits can become entagled with each other. For example, if you apply a Hadamard gate to the first qubit (alpha), then apply the CNOT gate with the first qubit as the control bit, the resulting system of two qubits will be entangled. This entanglement is represented by a border surrounding both qubits. Measuring either qubit will destroy the entangelment.
+Since you are now dealing with two qubits, the qubits can become entangled with each other. For example, if you apply a Hadamard gate to the first qubit (alpha), then apply the CNOT gate with the first qubit as the control bit, the resulting system of two qubits will be entangled. This entanglement is represented by a border surrounding both qubits. Measuring either qubit will destroy the entanglement.
 
 ![Qubits are entangled](https://i.imgur.com/RkF2yxE.png)
