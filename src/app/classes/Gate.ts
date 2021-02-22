@@ -4,12 +4,12 @@ const SWAP_R2_R3 = [
   [1, 0, 0, 0],
   [0, 0, 1, 0],
   [0, 1, 0, 0],
-  [0, 0, 0, 1]
+  [0, 0, 0, 1],
 ];
 
 const IDENTITY_2X2 = [
   [1, 0],
-  [0, 1]
+  [0, 1],
 ];
 
 export class Gate {
@@ -37,9 +37,13 @@ export class Gate {
     }
   }
 
-  tensorProduct(mat0: math.Complex[][], mat1: math.Complex[][]): math.Complex[][] {
-    const prod = Array<math.Complex>(mat0.length * mat1.length)
-      .fill(Array<math.Complex>(mat0[0].length * mat1[0].length).fill(0));
+  tensorProduct(
+    mat0: math.Complex[][],
+    mat1: math.Complex[][]
+  ): math.Complex[][] {
+    const prod = Array<math.Complex>(mat0.length * mat1.length).fill(
+      Array<math.Complex>(mat0[0].length * mat1[0].length).fill(0)
+    );
     return prod.map((row: math.Complex[], r: number) => {
       return row.map((col: math.Complex[], c: number) => {
         return math.multiply(
@@ -52,72 +56,72 @@ export class Gate {
 }
 
 export const gateList = [
-  new Gate('X',
+  new Gate('X', [
+    [0, 1],
+    [1, 0],
+  ]),
+  new Gate('Y', [
+    [0, math.multiply(-1, math.i)],
+    [math.i, 0],
+  ]),
+  new Gate('Z', [
+    [1, 0],
+    [0, -1],
+  ]),
+  new Gate('Hadamard', [
+    [math.divide(1, math.sqrt(2)), math.divide(1, math.sqrt(2))],
+    [math.divide(1, math.sqrt(2)), math.divide(-1, math.sqrt(2))],
+  ]),
+  new Gate('Phase', [
+    [1, 0],
+    [0, math.i],
+  ]),
+  new Gate('T', [
+    [1, 0],
+    [0, math.exp(math.multiply(math.i, math.divide(math.pi, 4)))],
+  ]),
+  new Gate('CNOT', [
+    [1, 0, 0, 0],
+    [0, 1, 0, 0],
+    [0, 0, 0, 1],
+    [0, 0, 1, 0],
+  ]),
+  new Gate('CZ', [
+    [1, 0, 0, 0],
+    [0, 1, 0, 0],
+    [0, 0, 1, 0],
+    [0, 0, 0, -1],
+  ]),
+  new Gate('Swap', [
+    [1, 0, 0, 0],
+    [0, 0, 1, 0],
+    [0, 1, 0, 0],
+    [0, 0, 0, 1],
+  ]),
+  new Gate('QFT', [
     [
-      [0, 1],
-      [1, 0]
-    ]
-  ),
-  new Gate('Y',
+      math.divide(1, 2),
+      math.divide(1, 2),
+      math.divide(1, 2),
+      math.divide(1, 2),
+    ],
     [
-      [0, math.multiply(-1, math.i)],
-      [math.i, 0]
-    ]
-  ),
-  new Gate('Z',
+      math.divide(1, 2),
+      math.divide(math.i, 2),
+      math.divide(-1, 2),
+      math.divide(math.multiply(-1, math.i), 2),
+    ],
     [
-      [1, 0],
-      [0, -1]
-    ]
-  ),
-  new Gate('Hadamard',
+      math.divide(1, 2),
+      math.divide(-1, 2),
+      math.divide(1, 2),
+      math.divide(-1, 2),
+    ],
     [
-      [math.divide(1, math.sqrt(2)), math.divide(1, math.sqrt(2))],
-      [math.divide(1, math.sqrt(2)), math.divide(-1, math.sqrt(2))]
-    ]
-  ),
-  new Gate('Phase',
-    [
-      [1, 0],
-      [0, math.i]
-    ]
-  ),
-  new Gate('T',
-    [
-      [1, 0],
-      [0, math.exp(math.multiply(math.i, math.divide(math.pi, 4)))]
-    ]
-  ),
-  new Gate('CNOT',
-    [
-      [1, 0, 0, 0],
-      [0, 1, 0, 0],
-      [0, 0, 0, 1],
-      [0, 0, 1, 0]
-    ]
-  ),
-  new Gate('CZ',
-    [
-      [1, 0, 0, 0],
-      [0, 1, 0, 0],
-      [0, 0, 1, 0],
-      [0, 0, 0, -1]
-    ]
-  ),
-  new Gate('Swap',
-    [
-      [1, 0, 0, 0],
-      [0, 0, 1, 0],
-      [0, 1, 0, 0],
-      [0, 0, 0, 1]
-    ]
-  ),
-  new Gate('QFT',
-    [
-      [math.divide(1, 2), math.divide(1, 2), math.divide(1, 2), math.divide(1, 2)],
-      [math.divide(1, 2), math.divide(math.i, 2), math.divide(-1, 2), math.divide(math.multiply(-1, math.i), 2)],
-      [math.divide(1, 2), math.divide(-1, 2), math.divide(1, 2), math.divide(-1, 2)],
-      [math.divide(1, 2), math.divide(math.multiply(-1, math.i), 2), math.divide(-1, 2), math.divide(math.i, 2)]
-    ]
-  )
+      math.divide(1, 2),
+      math.divide(math.multiply(-1, math.i), 2),
+      math.divide(-1, 2),
+      math.divide(math.i, 2),
+    ],
+  ]),
 ];

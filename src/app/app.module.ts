@@ -9,7 +9,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MessageAreaComponent } from './components/message-area/message-area.component';
 import { SwitchComponent } from './components/switch/switch.component';
 import { EditQubitComponent } from './components/edit-qubit/edit-qubit.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +20,10 @@ import {FormsModule} from '@angular/forms';
     SidebarComponent,
     MessageAreaComponent,
     SwitchComponent,
-    EditQubitComponent
+    EditQubitComponent,
   ],
-    imports: [
-        BrowserModule,
-        FormsModule
-    ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

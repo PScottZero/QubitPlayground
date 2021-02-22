@@ -1,8 +1,11 @@
 <div id="switch" (click)="toggleSlider()">
-  <div id="slider" [class.left]="getSliderLabel() == 1"
-       [class.right]="getSliderLabel() == 2">
+  <div
+    id="slider"
+    [class.left]="getSliderLabel() == 1"
+    [class.right]="getSliderLabel() == 2"
+  >
     <div id="selected">
-      <p>{{getSliderLabel()}}</p>
+      <p>{{ getSliderLabel() }}</p>
     </div>
   </div>
 </div>

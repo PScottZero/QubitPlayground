@@ -1,22 +1,58 @@
-<div id="qubit_container" [class.border]="isEntangled()" [class.expand]="isTensorMode()">
-  <div class="qubit" [class.qubit_hover]="selectionEnabled()"
-       [class.qubit_single]="!isTensorMode()" (click)="selectQubit(0)">
-    <img class="qubit_img" src="assets/images/{{getQubitImage()}}" alt="Qubit One"
-         [style.transform]="'rotate(' + rotateQubit(0) + 'deg)'">
+<div
+  id="qubit_container"
+  [class.border]="isEntangled()"
+  [class.expand]="isTensorMode()"
+>
+  <div
+    class="qubit"
+    [class.qubit_hover]="selectionEnabled()"
+    [class.qubit_single]="!isTensorMode()"
+    (click)="selectQubit(0)"
+  >
+    <img
+      class="qubit_img"
+      src="assets/images/{{ getQubitImage() }}"
+      alt="Qubit One"
+      [style.transform]="'rotate(' + rotateQubit(0) + 'deg)'"
+    />
     <p class="qubit_name">α</p>
-    <img class="qubit_state_zero" src="assets/images/kets/ket-0.svg"
-         [class.hide]="isEntangled()" alt="|0⟩">
-    <img class="qubit_state_one" src="assets/images/kets/ket-1.svg"
-         [class.hide]="isEntangled()" alt="|1⟩">
+    <img
+      class="qubit_state_zero"
+      src="assets/images/kets/ket-0.svg"
+      [class.hide]="isEntangled()"
+      alt="|0⟩"
+    />
+    <img
+      class="qubit_state_one"
+      src="assets/images/kets/ket-1.svg"
+      [class.hide]="isEntangled()"
+      alt="|1⟩"
+    />
   </div>
-  <div class="qubit" [class.hide_qubit]="!isTensorMode()"
-       [class.qubit_hover]="selectionEnabled()" (click)="selectQubit(1)">
-    <img class="qubit_img" src="assets/images/{{getQubitImage()}}" alt="Qubit Two"
-         [style.transform]="'rotate(' + rotateQubit(1) + 'deg)'">
+  <div
+    class="qubit"
+    [class.hide_qubit]="!isTensorMode()"
+    [class.qubit_hover]="selectionEnabled()"
+    (click)="selectQubit(1)"
+  >
+    <img
+      class="qubit_img"
+      src="assets/images/{{ getQubitImage() }}"
+      alt="Qubit Two"
+      [style.transform]="'rotate(' + rotateQubit(1) + 'deg)'"
+    />
     <p class="qubit_name" [class.hide]="!isTensorMode()">β</p>
-    <img class="qubit_state_zero" src="assets/images/kets/ket-0.svg"
-         [class.hide]="isEntangled() || !isTensorMode()" alt="|0⟩">
-    <img class="qubit_state_one" src="assets/images/kets/ket-1.svg"
-         [class.hide]="isEntangled() || !isTensorMode()" alt="|1⟩">
+    <img
+      class="qubit_state_zero"
+      src="assets/images/kets/ket-0.svg"
+      [class.hide]="isEntangled() || !isTensorMode()"
+      alt="|0⟩"
+    />
+    <img
+      class="qubit_state_one"
+      src="assets/images/kets/ket-1.svg"
+      [class.hide]="isEntangled() || !isTensorMode()"
+      alt="|1⟩"
+    />
   </div>
 </div>

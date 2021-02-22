@@ -10,6 +10,7 @@ Qubit Playground is a web app that simulates one or two qubits at a time. You ca
 ![Qubit Playground in one qubit mode](https://i.imgur.com/cR0dXgo.png)
 
 By default, the website loads into one qubit mode. In this mode, you can apply the following one qubit gates, which can be found in the gates sidebar:
+
 - Pauli-X
 - Pauli-Y
 - Pauli-Z
@@ -28,6 +29,7 @@ By default, the qubit is in the zero state. However, by clicking on the 'Change 
 Two qubit mode allows you to interact with a system of two qubits. This mode is very similar to one qubit mode except now, since there are two qubits, the qubits can be entangled with each other.
 
 In two qubit mode, you can apply the same gates you could apply in one qubit mode, but there are now several gates that take two qubits as input instead of one:
+
 - Controlled NOT (CNOT)
 - Controlled Z (CZ)
 - Swap

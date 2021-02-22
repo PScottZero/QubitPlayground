@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {Qubit} from '../classes/Qubit';
+import { Injectable } from '@angular/core';
+import { Qubit } from '../classes/Qubit';
 import * as math from 'mathjs';
-import {MessageService} from './message.service';
-import {Gate} from '../classes/Gate';
+import { MessageService } from './message.service';
+import { Gate } from '../classes/Gate';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class QubitService {
   qubit: Qubit;
@@ -21,11 +21,16 @@ export class QubitService {
   }
 
   getQubitRotation(): number {
-    const amp0 = (math.unequal(math.im(this.qubit.amps[0]), 0)) ?
-      math.norm(this.qubit.amps[0]) : math.re(this.qubit.amps[0]);
-    const amp1 = (math.unequal(math.im(this.qubit.amps[1]), 0)) ?
-      math.norm(this.qubit.amps[1]) : math.re(this.qubit.amps[1]);
-    return math.multiply(-1, math.multiply(math.atan2(amp1, amp0), math.divide(180, math.pi)));
+    const amp0 = math.unequal(math.im(this.qubit.amps[0]), 0)
+      ? math.norm(this.qubit.amps[0])
+      : math.re(this.qubit.amps[0]);
+    const amp1 = math.unequal(math.im(this.qubit.amps[1]), 0)
+      ? math.norm(this.qubit.amps[1])
+      : math.re(this.qubit.amps[1]);
+    return math.multiply(
+      -1,
+      math.multiply(math.atan2(amp1, amp0), math.divide(180, math.pi))
+    );
   }
 
   setQubitMessage(): void {

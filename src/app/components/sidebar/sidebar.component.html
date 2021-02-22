@@ -1,10 +1,23 @@
-<div id="sidebar" [class.show]="isVisible" (mouseenter)="show()" (mouseleave)="hide()">
+<div
+  id="sidebar"
+  [class.show]="isVisible"
+  (mouseenter)="show()"
+  (mouseleave)="hide()"
+>
   <div id="sidebar_label" (click)="toggle()">
     <p>GATES</p>
   </div>
   <div id="gate_selector">
-    <img src="assets/images/measure.svg" alt="Measure Qubit" (click)="measure()">
-    <img *ngFor="let gate of getGates()" src="assets/images/gates/{{gate.name | lowercase}}-gate.svg"
-      (click)="selectGate(gate)" alt="{{gate.name}}">
+    <img
+      src="assets/images/measure.svg"
+      alt="Measure Qubit"
+      (click)="measure()"
+    />
+    <img
+      *ngFor="let gate of getGates()"
+      src="assets/images/gates/{{ gate.name | lowercase }}-gate.svg"
+      (click)="selectGate(gate)"
+      alt="{{ gate.name }}"
+    />
   </div>
 </div>

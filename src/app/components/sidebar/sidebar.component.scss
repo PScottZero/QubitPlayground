@@ -1,4 +1,4 @@
-@import '../../../variables';
+@import "../../../variables";
 
 #sidebar {
   position: fixed;
@@ -75,7 +75,7 @@
     writing-mode: vertical-rl;
 
     /* safari only */
-    @media not all and (min-resolution:.001dpcm) {
+    @media not all and (min-resolution: 0.001dpcm) {
       right: 0;
     }
   }

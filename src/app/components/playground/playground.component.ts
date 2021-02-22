@@ -1,17 +1,19 @@
-import {Component} from '@angular/core';
-import {TensorService} from '../../services/tensor.service';
-import {QubitService} from '../../services/qubit.service';
-import {AppStateService} from '../../services/app-state.service';
+import { Component } from '@angular/core';
+import { TensorService } from '../../services/tensor.service';
+import { QubitService } from '../../services/qubit.service';
+import { AppStateService } from '../../services/app-state.service';
 
 @Component({
   selector: 'app-playground',
   templateUrl: './playground.component.html',
-  styleUrls: ['./playground.component.scss']
+  styleUrls: ['./playground.component.scss'],
 })
 export class PlaygroundComponent {
-  constructor(private qubitService: QubitService,
-              private tensorService: TensorService,
-              private appStateService: AppStateService) {}
+  constructor(
+    private qubitService: QubitService,
+    private tensorService: TensorService,
+    private appStateService: AppStateService
+  ) {}
 
   getQubitImage(): string {
     if (this.isEntangled()) {

@@ -1,17 +1,19 @@
-import {Component} from '@angular/core';
-import {AppStateService} from '../../services/app-state.service';
-import {QubitService} from '../../services/qubit.service';
-import {TensorService} from '../../services/tensor.service';
+import { Component } from '@angular/core';
+import { AppStateService } from '../../services/app-state.service';
+import { QubitService } from '../../services/qubit.service';
+import { TensorService } from '../../services/tensor.service';
 
 @Component({
   selector: 'app-switch',
   templateUrl: './switch.component.html',
-  styleUrls: ['./switch.component.scss']
+  styleUrls: ['./switch.component.scss'],
 })
 export class SwitchComponent {
-  constructor(private qubitService: QubitService,
-              private tensorService: TensorService,
-              private appStateService: AppStateService) {}
+  constructor(
+    private qubitService: QubitService,
+    private tensorService: TensorService,
+    private appStateService: AppStateService
+  ) {}
 
   toggleSlider(): void {
     this.appStateService.toggleMode();

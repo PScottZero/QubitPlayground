@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {Tensor} from '../classes/Tensor';
-import {Gate} from '../classes/Gate';
+import { Injectable } from '@angular/core';
+import { Tensor } from '../classes/Tensor';
+import { Gate } from '../classes/Gate';
 import * as math from 'mathjs';
-import {MessageService} from './message.service';
+import { MessageService } from './message.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TensorService {
   qubitAmps: math.Complex[];

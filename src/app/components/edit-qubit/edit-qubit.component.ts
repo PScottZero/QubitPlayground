@@ -1,28 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import {AppStateService} from '../../services/app-state.service';
+import { AppStateService } from '../../services/app-state.service';
 import * as math from 'mathjs';
-import {QubitInput} from '../../classes/QubitInput';
-import {QubitService} from '../../services/qubit.service';
-import {TensorService} from '../../services/tensor.service';
+import { QubitInput } from '../../classes/QubitInput';
+import { QubitService } from '../../services/qubit.service';
+import { TensorService } from '../../services/tensor.service';
 import set = Reflect.set;
 
 @Component({
   selector: 'app-edit-qubit',
   templateUrl: './edit-qubit.component.html',
-  styleUrls: ['./edit-qubit.component.scss']
+  styleUrls: ['./edit-qubit.component.scss'],
 })
 export class EditQubitComponent implements OnInit {
   oneQubitInputs: QubitInput[];
   twoQubitInputs: QubitInput[];
 
-  constructor(private appStateService: AppStateService,
-              private qubitService: QubitService,
-              private tensorService: TensorService) { }
+  constructor(
+    private appStateService: AppStateService,
+    private qubitService: QubitService,
+    private tensorService: TensorService
+  ) {}
 
   ngOnInit(): void {
     this.oneQubitInputs = [
       new QubitInput('0', '', true),
-      new QubitInput('1', '', true)
+      new QubitInput('1', '', true),
     ];
     this.twoQubitInputs = [
       new QubitInput('00', '', true),
@@ -113,6 +115,10 @@ export class EditQubitComponent implements OnInit {
   }
 
   useSmallerContainer(): boolean {
-    return !this.isTensorMode() && (window.screen.width < 700) && this.qubitDialogIsVisible();
+    return (
+      !this.isTensorMode() &&
+      window.screen.width < 700 &&
+      this.qubitDialogIsVisible()
+    );
   }
 }

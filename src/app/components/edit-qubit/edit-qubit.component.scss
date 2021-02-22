@@ -43,7 +43,7 @@ label {
     filter: invert(100%);
   }
 
-  @media (min-width:$mobile-cutoff) {
+  @media (min-width: $mobile-cutoff) {
     height: 16em;
     bottom: -16em;
     left: 50%;

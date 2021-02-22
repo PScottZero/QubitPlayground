@@ -1,5 +1,5 @@
 import * as math from 'mathjs';
-import {Gate} from './Gate';
+import { Gate } from './Gate';
 
 export class Qubit {
   amps: math.Complex[];
