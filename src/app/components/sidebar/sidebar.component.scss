@@ -9,8 +9,8 @@
 
   @media (min-width: $mobile-cutoff) {
     top: 0;
-    left: -13em;
-    width: 14em;
+    left: -19em;
+    width: 20em;
     height: 100%;
   }
 
@@ -41,7 +41,7 @@
 
     @media (min-width: $mobile-cutoff) {
       width: 100%;
-      padding: 1em 2em;
+      padding: 1em 4em;
       transition: 0.2s;
 
       &:hover {
